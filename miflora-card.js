@@ -85,28 +85,28 @@ class MifloraCard extends HTMLElement {
             var _alertIcon = '';
             if (_name == 'moisture') {
                 if (_state > _maxMoisture) {
-                    _alertStyle = ';color:red';
+                    _alertStyle = ';&#5daeea';
                     _alertIcon = '&#9650; ';
                 } else if (_state < _minMoisture) {
-                    _alertStyle = ';color:red';
+                    _alertStyle = ';&#5daeea';
                     _alertIcon = '&#9660; '
                 }
             }
             if (_name == 'conductivity') {
                 if (_state < _minConductivity) {
-                    _alertStyle = ';color:red';
+                    _alertStyle = ';&#e15b64';
                     _alertIcon = '&#9660; ';
                 } else if (_state > _maxConductivity) {
-                    _alertStyle = ';color:red';
+                    _alertStyle = ';&#e15b64';
                     _alertIcon = '&#9650; '
                 }
             }
             if (_name == 'temperature') {
                 if (_state < _minTemperature) {
-                    _alertStyle = ';color:red';
+                    _alertStyle = ';&#e15b64';
                     _alertIcon = '&#9660; ';
                 } else if (_state > _maxTemperature) {
-                    _alertStyle = ';color:red';
+                    _alertStyle = ';&#e15b64';
                     _alertIcon = '&#9650; '
                 }
             }
