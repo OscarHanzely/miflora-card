@@ -11,7 +11,7 @@ class MifloraCard extends HTMLElement {
             temperature: 'hass:thermometer',
             intensity: 'hass:white-balance-sunny',
             rssi: 'mdi:wifi',
-            conductivity: 'hass:emoticon-poop',
+            conductivity: 'hass:spa',
             battery: 'hass:battery'
         };
 
@@ -141,6 +141,11 @@ class MifloraCard extends HTMLElement {
         const style = document.createElement('style');
 
         style.textContent = `
+            .card-header {
+                padding: 0px !important;
+                margin: 0px !important;
+            }
+
             ha-card {
                 position: relative;
                 padding: 0;
