@@ -155,27 +155,27 @@ class MifloraCard extends HTMLElement {
                 width: 100%;
             }
             .image {
-                margin-left: 15px;
-                margin-right: 15px;
-                margin-bottom: 15px;
+                margin-left: 5px;
+                margin-right: 5px;
+                margin-bottom: 5px;
                 margin-top: -8px;
-                width: 125px;
-                height: 125px;
+                width: 100px;
+                height: 100px;
                 border-radius: 6px;
             }
             .location {
                 float: right;
-                margin-left: 15px;
+                margin-left: 5px;
                 display: grid;
                 text-align: center;
             }            
             .sensor {
                 display: flex;
                 cursor: pointer;
-                padding-bottom: 10px;
+                padding-bottom: 5px;
             }
             .icon {
-                margin-left: 10px;
+                margin-left: 0px;
                 color: var(--paper-item-icon-color);
             }
             .name {
