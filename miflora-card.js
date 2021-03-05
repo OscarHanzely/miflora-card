@@ -184,6 +184,7 @@ class MifloraCard extends HTMLElement {
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                display:none;
             }
             .state {
                 white-space: nowrap;
