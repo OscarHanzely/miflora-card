@@ -1,4 +1,4 @@
-console.info("%c  MIFLORA-CARD  \n%c Version 0.1.3 ", "color: orange; font-weight: bold; background: black", "color: white; font-weight: bold; background: dimgray");
+console.info("%c  MIFLORA-CARD  \n%c Version 0.1.4 ", "color: orange; font-weight: bold; background: black", "color: white; font-weight: bold; background: dimgray");
 class MifloraCard extends HTMLElement {
     constructor() {
         super();
@@ -148,7 +148,7 @@ class MifloraCard extends HTMLElement {
 
             ha-card {
                 position: relative;
-                padding: 0;
+                padding: 12px;
                 background-size: 100%;
             }
             ha-card .header {
@@ -159,8 +159,8 @@ class MifloraCard extends HTMLElement {
                 margin-right: 5px;
                 margin-bottom: 5px;
                 margin-top: -8px;
-                width: 100px;
-                height: 100px;
+                width: 150px;
+                height: 150px;
                 border-radius: 6px;
             }
             .location {
@@ -172,7 +172,7 @@ class MifloraCard extends HTMLElement {
             .sensor {
                 display: flex;
                 cursor: pointer;
-                padding-bottom: 5px;
+                padding-bottom: 9px;
             }
             .icon {
                 margin-left: 0px;
