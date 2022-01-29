@@ -11,8 +11,9 @@ class MifloraCard extends HTMLElement {
             temperature: 'hass:thermometer',
             intensity: 'hass:white-balance-sunny',
             rssi: 'mdi:wifi',
-            conductivity: 'hass:spa',
-            battery: 'hass:battery'
+            conductivity: 'mdi:sprout',
+            battery: 'hass:battery',
+            location: 'mdi:home-map-marker'
         };
 
     }
@@ -118,6 +119,16 @@ class MifloraCard extends HTMLElement {
                 </div>
                 `
         }
+         if (config.location != null) {
+            this.shadowRoot.getElementById('sensors').innerHTML += `
+                <div id="sensor${config.entities.length+1}" class="sensor">
+                    <div class="icon"><ha-icon icon="mdi:home-map-marker"></ha-icon></div>
+                    <div class="name">Location</div>
+                    <div class="state" style="">${_state}</div>
+                </div>
+                `
+        }
+        
 
         for (var i = 0; i < config.entities.length; i++) {
             this.shadowRoot.getElementById('sensor' + [i]).onclick = this._click.bind(this, config.entities[i]['entity']);
@@ -201,16 +212,9 @@ class MifloraCard extends HTMLElement {
             }
             `;
 
-            // Check if location is set and save location in Variable plantlocation
-            if (config.location == null) {
-                var _plantlocation = '';
-            } else {
-                var _plantlocation = config.location;
-            }
-
-            // Display Plant image (required) and location (optional)
+            // Display Plant image (required) and location
             plantimage.innerHTML = `
-            <p class="location"><img class="image" src=/local/${config.image}>${_plantlocation}</p>
+            <p class="location"><img class="image" src=/local/${config.image}></p>
             `;
 
         content.id = "container";
