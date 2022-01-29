@@ -120,11 +120,12 @@ class MifloraCard extends HTMLElement {
                 `
         }
          if (config.location != null) {
+            var _plantlocation = config.location;
             this.shadowRoot.getElementById('sensors').innerHTML += `
                 <div id="sensor${config.entities.length+1}" class="sensor">
                     <div class="icon"><ha-icon icon="mdi:home-map-marker"></ha-icon></div>
                     <div class="name">Location</div>
-                    <div class="state" style="">${config.location}</div>
+                    <div class="state" style="">${_plantlocation}</div>
                 </div>
                 `
         }
